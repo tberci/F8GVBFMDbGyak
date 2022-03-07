@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<f8gvbf xmlns:xsi ="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="nyilvantartas.xsd">
+
+	<etterem ekod="e1">
+		<nev>Etterem1</nev>
+		<cim>
+			<varos>Ráckeve</varos>
+			<utca>Pék utca</utca>
+			<hazszam>7</hazszam>
+		</cim>
+		<csillag>2</csillag>
+	</etterem>
+	
+	<etterem ekod="e2">
+		<nev>Etterem2</nev>
+		<cim>
+			<varos>Város2</varos>
+			<utca>Tészta utca</utca>
+			<hazszam>4</hazszam>
+		</cim>
+		<csillag>5</csillag>
+	</etterem>
+	
+	
+	<!-- -foszakacs -->
+	<foszakacs fkod="f1" e_f="e1">
+		<nev>Nagy Béla</nev>
+		<eletkor>50</eletkor>
+		<vegzettseg>Szakács</vegzettseg>
+		<vegzettseg>Pék</vegzettseg>
+	</foszakacs>
+	
+	<foszakacs fkod="f2" e_f="e1">
+		<nev>Konrád Ferenc</nev>
+		<eletkor>60</eletkor>
+		<vegzettseg>Szakács</vegzettseg>
+	</foszakacs>
+	
+	
+	<!-- szakacs -->
+	<szakacs szkod="sz1" e_sz="e1">
+		<nev>Kiss János</nev>
+		<reszleg>4</reszleg>
+		<vegzettseg>Pék</vegzettseg>
+		<vegzettseg>Cukrász</vegzettseg>
+		<vegzettseg>Szakács</vegzettseg>
+	</szakacs>
+	
+	<szakacs szkod="sz2" e_sz="e2">
+		<nev>Kovács Imre</nev>
+		<reszleg>3</reszleg>
+		<vegzettseg>Szakács</vegzettseg>
+		<vegzettseg>Asztalos</vegzettseg>
+		<vegzettseg>Ács</vegzettseg>
+	</szakacs>
+	
+	<!--Gyakornokok -->
+	<gyakornok gykod="gy1" e_gy="e1">
+		<nev>Kiss Lajos</nev>
+		<gyakorlat>
+			<kezdete>2020.05.08</kezdete>
+			<idotartama>6 hónap</idotartama>
+		</gyakorlat>
+		<muszak>reggeli</muszak>
+		<muszak>esti</muszak>
+	</gyakornok>
+	
+	<gyakornok gykod="gy2" e_gy="e1">
+		<nev>Gyakornok Gyula</nev>
+		<gyakorlat>
+			<kezdete>2020.03.08</kezdete>
+			<idotartama>3 hónap</idotartama>
+		</gyakorlat>
+		<muszak>reggeli</muszak>
+		<muszak>esti</muszak>
+	</gyakornok>
+	
+	<gyakornok gykod="gy3" e_gy="e2">
+		<nev>Kiss János</nev>
+		<gyakorlat>
+			<kezdete>2020.08.01</kezdete>
+			<idotartama>2 hónap</idotartama>
+		</gyakorlat>
+		<muszak>reggeli</muszak>
+		<muszak>esti</muszak>
+	</gyakornok>
+	
+	<gyakornok gykod="gy4" e_gy="e2">
+		<nev>Gyakornok Kálmán</nev>
+		<gyakorlat>
+			<kezdete>2020.08.01</kezdete>
+			<idotartama>7 hónap</idotartama>
+		</gyakorlat>
+		<muszak>reggeli</muszak>
+		<muszak>esti</muszak>
+	</gyakornok>
+	
+	<!-- Vendégek -->
+	<vendeg vkod="v1">
+		<nev>Vendég Gyula</nev>
+		<eletkor>23</eletkor>
+		<cim>
+			<utca>Pék</utca>
+			<varos>Nyék</varos>
+			<hazszam>9</hazszam>
+		</cim>
+	</vendeg>	
+	
+	<vendeg vkod="v2">
+		<nev>Vendég György</nev>
+		<eletkor>26</eletkor>
+		<cim>
+			<utca>Nagy utca</utca>
+			<varos>K falva</varos>
+			<hazszam>9</hazszam>
+		</cim>
+	</vendeg>	
+	
+	<vendeg vkod="v3">
+		<nev>Vendég Gyula</nev>
+		<eletkor>23</eletkor>
+		<cim>
+			<utca>Pék utca</utca>
+			<varos>Nyék</varos>
+			<hazszam>9</hazszam>
+		</cim>
+	</vendeg>	
+	
+	<!-- Rendelések -->
+	<rendeles rkod="r1" r_v="v1">
+		<osszeg>3000</osszeg>
+		<etel>Gulyás leves</etel>
+	</rendeles>
+	
+	<rendeles rkod="r2" r_v="v2">
+		<osszeg>200</osszeg>
+		<etel>Víz</etel>
+	</rendeles>
+	
+	<rendeles rkod="r3" r_v="v3">
+		<osszeg>15000</osszeg>
+		<etel>Paprikás krumpli</etel>
+	</rendeles>
+	
+	
+	
+</f8gvbf>
