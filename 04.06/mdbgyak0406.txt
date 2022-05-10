@@ -1,0 +1,56 @@
+1.feladat:
+------------------
+
+1.a,
+
+create type CAR_T as OBJECT (registration_number varchar2(100), color varchar2(30), production_year int, manufacturer varchar2(100), price int);
+
+1.b,
+
+create table car_showroom(car_id int, car  CAR_T);
+
+1.c,
+
+insert into car_showroom values(1, CAR_T('wqeqw111','red', 1999, 'autogyarto', 1200000));
+
+1.d,
+
+select cs.car.color from car_showroom cs;
+
+1.e,
+
+update car_showroom cs SET cs.car.color ='white' WHERE TO_CHAR(SYSDATE,'YYYY') - cs.car.production_year > 5;
+
+
+
+
+2.feladat:
+---------------
+2,a,
+
+create type CAR_TABLE_TYPE as TABLE OF CAR_T;
+
+2.b,
+
+create table showroom_network(id int, city varchar2(100),  car_table CAR_TABLE_TYPE)NESTED TABLE CAR_TABLE STORE AS CAR_NESTED;
+
+2.c,
+
+insert into showroom_network values(1, 'Miskolc', CAR_TABLE_TYPE(CAR_T('asd123','red', 2005, 'Skoda', 1200000)));
+
+2.d,
+
+insert into showroom_network values(1, 'Debrecen', CAR_TABLE_TYPE(CAR_T('ope123','green', 2005, 'Opel', 3412000)));
+
+2.e,
+
+select * from TABLE(select sn.car_table from showroom_network sn where sn.city ='Miskolc') S;
+
+2.f,
+
+select *from showroom_network sn WHERE sn.city='MISKOLC';
+A nested Tabla tipus nem látható csak unsupported datatypeként
+
+2.g,
+
+select * from car_nested;
